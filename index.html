@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Expense Tracker</h2>
+
+      <fieldset class="top-section">
+        <legend>Dashboard</legend>
+        <div class="balance-box">
+          <h4>Your Balance</h4>
+          <h2 id="total-balance">₹0.00</h2>
+        </div>
+        <div class="income-expense-row">
+          <div class="inc-box">
+            <h5>Income</h5>
+            <p id="total-income">+₹0.00</p>
+          </div>
+          <div class="exp-box">
+            <h5>Expense</h5>
+            <p id="total-expense">-₹0.00</p>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset class="form-section">
+        <legend>Add New Transaction</legend>
+        <form id="transaction-form">
+          <label for="text">Transaction Name</label>
+          <input
+            type="text"
+            id="text"
+            placeholder="e.g., Salary, Groceries"
+            required
+          />
+
+          <label for="amount">Amount</label>
+          <input
+            type="number"
+            id="amount"
+            placeholder="e.g., 5000, -1200"
+            required
+          />
+          <small style="color: #666"
+            >💡 Tip: Use minus (-) sign for expenses</small
+          >
+
+          <button type="submit" id="getTransactions">Add Transaction</button>
+        </form>
+      </fieldset>
+
+      <fieldset class="list-section">
+        <legend>History</legend>
+        <fieldset class="search-section">
+          <select name="type-filter" id="type-filter">
+            <option value="all">All</option>
+            <option value="income">Income</option>
+            <option value="expense">Expense</option>
+          </select>
+          <input
+            type="text"
+            id="search-input"
+            placeholder="Search transactions..."
+          />
+        </fieldset>
+        <fieldset>
+          <ul id="transaction-list"></ul>
+        </fieldset>
+      </fieldset>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
