@@ -178,3 +178,9 @@ li.expense {
 .deleteExpense:hover {
   background-color: red;
 }
+
+@media screen and (max-width: 500px) {
+    body{
+        padding: 0;
+    }
+}
